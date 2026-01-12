@@ -854,7 +854,7 @@ void mps_parser_t<i_t, f_t>::parse_rows(std::string_view line)
       objective_name = name;
     else
       ignored_objective_names.emplace(name);
-    // If we wanted to stricly follow MPS definition: a new objective row ('N') should be treated
+    // If we wanted to strictly follow MPS definition: a new objective row ('N') should be treated
     // as an unbounded constraints, aka an extra contraints row with lower bound -infinity and upper
     // bound +infinity. Most solver ignore it to simplify the constraint matrix. We keep
     // it in record as ignored to not consider finding it in COLUMNS section as an error.

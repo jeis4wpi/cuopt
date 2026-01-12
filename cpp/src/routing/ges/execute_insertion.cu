@@ -159,7 +159,7 @@ __global__ void __launch_bounds__(1024, 1)
                "Elected route_id should be smaller than number of routes");
   auto& orginal_route             = solution.routes[route_id];
   const auto orginal_route_length = orginal_route.get_num_nodes();
-  cuopt_assert(orginal_route_length > 0, "Route length should be stricly positive");
+  cuopt_assert(orginal_route_length > 0, "Route length should be strictly positive");
 
   // Load orignal route to shared to first fill ejection pool
   extern __shared__ i_t shmem[];
